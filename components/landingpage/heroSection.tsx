@@ -3,8 +3,7 @@ import Footer from "./footer"
 import { Navbar } from "./navbar"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { Skills } from "./skills"
-import PricingPage from "./pricing"
+// import PricingPage from "./pricing"
 import { FAQSection } from "./faq"
 import { Process } from "./testimonial"
 import { ChevronRight } from 'lucide-react';
@@ -29,9 +28,9 @@ const HeroSection = () => {
   }
 
   return (
-    <div className="bg-white dark:bg-black dark:text-gray-100 text-gray-900 relative">
-      <Navbar />
-      <div className="relative z-20">
+    <div className="bg-white border-b border-l-2 border-r-2  mr-12 ml-12 z-10 border-neutral-400 dark:bg-black dark:text-gray-100 text-gray-900 relative">
+      {/* <Navbar /> */}
+      <div className="relative ">
         <motion.section
           className="flex items-center justify-center mt-28 mb-28 text-black dark:text-white"
           initial="hidden"
@@ -119,12 +118,12 @@ const HeroSection = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <Skills />
+        {/* <Skills /> */}
       </motion.div>
       <Process />
 
 
-      <PricingPage />
+      {/* <PricingPage /> */}
       <FAQSection />
       <motion.section
         className="px-6 py-12 rounded-2xl h-[400px] mb-24 max-w-6xl border-2 border-neutral-200/50 dark:border-neutral-800/50 bg-neutral-100/40 dark:bg-neutral-800/40 shadow-lg backdrop-blur-md mx-auto mt-8 overflow-hidden flex flex-col items-center justify-center relative"
@@ -186,7 +185,7 @@ const HeroSection = () => {
           </motion.div>
         </div>
       </motion.section>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

@@ -67,18 +67,7 @@ const linkVariants = {
 export default function Footer() {
   return (
     <div>
-      {/* <div className="inset-0 flex items-center justify-center ">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }} // set opacity to 1
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          className="text-[18rem] font-bold  dark:text-neutral-900 text-gray-100 "
-          style={{ lineHeight: 1 }} // remove opacity from style
-        >
-          Syntax
-        </motion.div>
-      </div> */}
-      <footer className="relative border-b  bg-white dark:bg-black dark:text-gray-50 text-gray-900 overflow-hidden">
+      <footer className="relative border-t  bg-white dark:bg-black dark:text-gray-50 text-gray-900 overflow-hidden">
 
         <motion.div
           variants={containerVariants}

@@ -31,7 +31,7 @@ export const Navbar = () => {
           : "border-transparent bg-transparent shadow-none backdrop-blur-none",
       )}
     >
-      <div className="container flex items-center justify-between mx-auto px-4 py-3">
+      <div className="container border-b flex items-center justify-between mx-auto px-4 py-3">
         <motion.div
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
