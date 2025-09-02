@@ -1,13 +1,14 @@
-"use client"
-import Footer from "./footer"
-import { Navbar } from "./navbar"
-import { motion } from "framer-motion"
-import Image from "next/image"
-// import PricingPage from "./pricing"
-import { FAQSection } from "./faq"
-import { Process } from "./testimonial"
-import { ChevronRight } from 'lucide-react';
-import { Button } from "../ui/button"
+"use client";
+import Footer from "./footer";
+import { Navbar } from "./navbar";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { FAQSection } from "./faq";
+import { Process } from "./testimonial";
+import { ChevronRight } from "lucide-react";
+import { Button } from "../ui/button";
+import { Hero } from "@/components/hero-1";
+
 const HeroSection = () => {
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -16,7 +17,7 @@ const HeroSection = () => {
       y: 0,
       transition: { duration: 0.6 },
     },
-  }
+  };
 
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -25,19 +26,31 @@ const HeroSection = () => {
       y: 0,
       transition: { duration: 0.8 },
     },
-  }
+  };
 
   return (
-    <div className="bg-white border-b border-l-2 border-r-2  mr-12 ml-12 z-10 border-neutral-400 dark:bg-black dark:text-gray-100 text-gray-900 relative">
+    <div className="bg-white dark:bg-black dark:text-gray-100 text-gray-900 relative z-10">
       {/* <Navbar /> */}
-      <div className="relative ">
+      <section>
+
+        <Hero title="Build smarter tools for modern teams"
+          subtitle="Streamline your workflow and boost productivity with intuitive solutions. Security, speed, and simplicity—all in one platform."
+          eyebrow="Next-Gen Productivity"
+          ctaLabel="Get Started"
+          ctaHref="#" />
+      </section>
+
+      <div className="relative">
         <motion.section
           className="flex items-center justify-center mt-28 mb-28 text-black dark:text-white"
           initial="hidden"
           animate="visible"
         >
           <div className="max-w-7xl mx-auto text-center space-y-6 px-4">
-            <motion.h1 className="text-4xl md:text-7xl font-sans font-bold" variants={itemVariants}>
+            <motion.h1
+              className="text-4xl md:text-7xl font-sans font-bold"
+              variants={itemVariants}
+            >
               Optimize Your Workflow
               <br />
               with Cutting-Edge Solutions
@@ -46,13 +59,14 @@ const HeroSection = () => {
               className="max-w-4xl mx-auto font-medium text-zinc-700 dark:text-neutral-500 md:text-xl"
               variants={itemVariants}
             >
-              Meet our AI-powered SaaS solution to lighten your workload, increase efficiency and make more accurate
-              decisions.
+              Meet our AI-powered SaaS solution to lighten your workload,
+              increase efficiency and make more accurate decisions.
             </motion.p>
-            <motion.div className="flex justify-center items-center gap-4" variants={itemVariants}>
-              <motion.button
-                className="bg-amber-600  text-white px-6 py-3 font-semibold rounded-3xl transition duration-300 shadow-lg shadow-amber-500/25"
-              >
+            <motion.div
+              className="flex justify-center items-center gap-4"
+              variants={itemVariants}
+            >
+              <motion.button className="bg-amber-600 text-white px-6 py-3 font-semibold rounded-3xl transition duration-300 shadow-lg shadow-amber-500/25">
                 Start Free Trial
               </motion.button>
               <motion.div
@@ -63,7 +77,6 @@ const HeroSection = () => {
                   size="lg"
                   className="text-base w-full sm:w-auto bg-white dark:bg-black text-neutral-900 dark:text-neutral-100 group"
                 >
-                  {/* <Link href="#demo" className="flex items-center"> */}
                   Start a Demo
                   <motion.span
                     whileHover={{ x: 4 }}
@@ -71,7 +84,6 @@ const HeroSection = () => {
                   >
                     <ChevronRight className="ml-2 size-4 text-amber-400 transition-transform group-hover:translate-x-1" />
                   </motion.span>
-                  {/* </Link> */}
                 </Button>
               </motion.div>
             </motion.div>
@@ -95,21 +107,20 @@ const HeroSection = () => {
           className="relative"
         >
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[1150px] h-[100px] bg-orange-500 blur-[100px] -z-15" />
-          <div className="relative z-10 rounded-2xl w-[1300px] h-[800px] bg-neutral-900/60  backdrop-blur-md mx-auto mt-8 overflow-hidden">
-            <Image src="/l.webp"
+          <div className="relative z-10 rounded-2xl w-[1300px] h-[800px] bg-neutral-900/60 backdrop-blur-md mx-auto mt-8 overflow-hidden">
+            <Image
+              src="/l.webp"
               alt="AI-powered SaaS Dashboard"
-              fill className="rounded-3xl "
+              fill
+              className="rounded-3xl"
               priority
             />
             <div className="absolute bottom-0 left-0 h-[480px] w-full bg-gradient-to-t dark:from-black from-white via-transparent to-transparent z-20" />
           </div>
-
-
         </motion.div>
 
         <div className="opacity-10 mb-5" />
       </div>
-
 
       <motion.div
         className="mt-16 p-12 mb-24 opacity-55"
@@ -120,11 +131,11 @@ const HeroSection = () => {
       >
         {/* <Skills /> */}
       </motion.div>
+
       <Process />
-
-
       {/* <PricingPage /> */}
       <FAQSection />
+
       <motion.section
         className="px-6 py-12 rounded-2xl h-[400px] mb-24 max-w-6xl border-2 border-neutral-200/50 dark:border-neutral-800/50 bg-neutral-100/40 dark:bg-neutral-800/40 shadow-lg backdrop-blur-md mx-auto mt-8 overflow-hidden flex flex-col items-center justify-center relative"
         initial="hidden"
@@ -132,10 +143,7 @@ const HeroSection = () => {
         viewport={{ once: true, amount: 0.3 }}
         variants={sectionVariants}
       >
-        {/* <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[1200px] h-[10px] bg-amber-600 blur-[10px] z-5" /> */}
-
         <div className="absolute inset-0 bg-gradient-to-r from-neutral-100 via-neutral-200 to-neutral-300 dark:from-neutral-800 dark:via-neutral-800 dark:to-neutral-900 rounded-2xl pointer-events-none z-0" />
-
         <div className="w-full flex flex-col items-center justify-center relative z-10 text-center">
           <motion.h2
             className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-gray-100 leading-tight mb-6"
@@ -161,7 +169,8 @@ const HeroSection = () => {
             className="text-neutral-800 dark:text-neutral-400 text-xl max-w-2xl mx-auto mb-8"
             variants={itemVariants}
           >
-            Join thousands of satisfied users who have transformed their workflows with our AI-powered SaaS solution.
+            Join thousands of satisfied users who have transformed their
+            workflows with our AI-powered SaaS solution.
           </motion.p>
 
           <motion.div
@@ -169,14 +178,14 @@ const HeroSection = () => {
             variants={itemVariants}
           >
             <motion.button
-              className="border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 px-8 py-3 font-semibold rounded-full  transition duration-300"
+              className="border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 px-8 py-3 font-semibold rounded-full transition duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Contact Us
             </motion.button>
             <motion.button
-              className="border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 px-8 py-3 font-semibold rounded-full  duration-300"
+              className="border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 px-8 py-3 font-semibold rounded-full transition duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -185,9 +194,10 @@ const HeroSection = () => {
           </motion.div>
         </div>
       </motion.section>
+
       {/* <Footer /> */}
     </div>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;

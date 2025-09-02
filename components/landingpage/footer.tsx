@@ -67,7 +67,7 @@ const linkVariants = {
 export default function Footer() {
   return (
     <div>
-      <footer className="relative border-t  bg-white dark:bg-black dark:text-gray-50 text-gray-900 overflow-hidden">
+      <footer className="relative border-t-2 border-neutral-200 dark:border-neutral-800/50 bg-white dark:bg-black dark:text-gray-50 text-gray-900 overflow-hidden">
 
         <motion.div
           variants={containerVariants}
