@@ -29,7 +29,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-black dark:text-gray-100 text-gray-900 relative z-10">
+    <div className="bg-black  relative z-10">
       {/* <Navbar /> */}
       <section>
 
@@ -41,7 +41,7 @@ const HeroSection = () => {
       </section>
 
       <div className="relative">
-        <motion.section
+        {/* <motion.section
           className="flex items-center justify-center mt-28 mb-28 text-black dark:text-white"
           initial="hidden"
           animate="visible"
@@ -98,9 +98,9 @@ const HeroSection = () => {
               </p>
             </motion.div>
           </div>
-        </motion.section>
+        </motion.section> */}
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
@@ -117,9 +117,9 @@ const HeroSection = () => {
             />
             <div className="absolute bottom-0 left-0 h-[480px] w-full bg-gradient-to-t dark:from-black from-white via-transparent to-transparent z-20" />
           </div>
-        </motion.div>
+        </motion.div> */}
 
-        <div className="opacity-10 mb-5" />
+        {/* <div className="opacity-10 mb-5" /> */}
       </div>
 
       <motion.div
@@ -135,66 +135,6 @@ const HeroSection = () => {
       <Process />
       {/* <PricingPage /> */}
       <FAQSection />
-
-      <motion.section
-        className="px-6 py-12 rounded-2xl h-[400px] mb-24 max-w-6xl border-2 border-neutral-200/50 dark:border-neutral-800/50 bg-neutral-100/40 dark:bg-neutral-800/40 shadow-lg backdrop-blur-md mx-auto mt-8 overflow-hidden flex flex-col items-center justify-center relative"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={sectionVariants}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-neutral-100 via-neutral-200 to-neutral-300 dark:from-neutral-800 dark:via-neutral-800 dark:to-neutral-900 rounded-2xl pointer-events-none z-0" />
-        <div className="w-full flex flex-col items-center justify-center relative z-10 text-center">
-          <motion.h2
-            className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-gray-100 leading-tight mb-6"
-            variants={itemVariants}
-          >
-            Ready to take your project to the{" "}
-            <span className="text-orange-400 font-serif relative inline-block">
-              next level
-              <motion.div
-                className="absolute -inset-2 bg-orange-400/20 blur-lg rounded-lg -z-10"
-                animate={{ opacity: [0.2, 0.4, 0.2] }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-            </span>
-            ?
-          </motion.h2>
-
-          <motion.p
-            className="text-neutral-800 dark:text-neutral-400 text-xl max-w-2xl mx-auto mb-8"
-            variants={itemVariants}
-          >
-            Join thousands of satisfied users who have transformed their
-            workflows with our AI-powered SaaS solution.
-          </motion.p>
-
-          <motion.div
-            className="flex flex-wrap justify-center items-center gap-6"
-            variants={itemVariants}
-          >
-            <motion.button
-              className="border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 px-8 py-3 font-semibold rounded-full transition duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Contact Us
-            </motion.button>
-            <motion.button
-              className="border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 px-8 py-3 font-semibold rounded-full transition duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Learn More
-            </motion.button>
-          </motion.div>
-        </div>
-      </motion.section>
-
       {/* <Footer /> */}
     </div>
   );
