@@ -7,7 +7,6 @@ import { FAQSection } from "./faq";
 import { Process } from "./testimonial";
 import { ChevronRight } from "lucide-react";
 import { Button } from "../ui/button";
-import { Hero } from "@/components/hero-1";
 
 const HeroSection = () => {
   const itemVariants = {
@@ -30,18 +29,9 @@ const HeroSection = () => {
 
   return (
     <div className="bg-black  relative z-10">
-      {/* <Navbar /> */}
-      <section>
-
-        <Hero title="Build smarter tools for modern teams"
-          subtitle="Streamline your workflow and boost productivity with intuitive solutions. Security, speed, and simplicity—all in one platform."
-          eyebrow="Next-Gen Productivity"
-          ctaLabel="Get Started"
-          ctaHref="#" />
-      </section>
 
       <div className="relative">
-        {/* <motion.section
+        <motion.section
           className="flex items-center justify-center mt-28 mb-28 text-black dark:text-white"
           initial="hidden"
           animate="visible"
@@ -98,9 +88,9 @@ const HeroSection = () => {
               </p>
             </motion.div>
           </div>
-        </motion.section> */}
+        </motion.section>
 
-        {/* <motion.div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
@@ -117,9 +107,9 @@ const HeroSection = () => {
             />
             <div className="absolute bottom-0 left-0 h-[480px] w-full bg-gradient-to-t dark:from-black from-white via-transparent to-transparent z-20" />
           </div>
-        </motion.div> */}
+        </motion.div>
 
-        {/* <div className="opacity-10 mb-5" /> */}
+        <div className="opacity-10 mb-5" />
       </div>
 
       <motion.div
