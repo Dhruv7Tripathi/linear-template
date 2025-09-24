@@ -28,9 +28,9 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="bg-black  relative z-10">
+    <div className="bg-white dark:bg-black  ">
 
-      <div className="relative">
+      <div className="">
         <motion.section
           className="flex items-center justify-center mt-28 mb-28 text-black dark:text-white"
           initial="hidden"

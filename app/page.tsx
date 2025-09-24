@@ -7,7 +7,7 @@ export default function HomePage() {
     <div className="bg-white dark:bg-black text-gray-900 dark:text-gray-100">
       {/* WRAPPED with borders */}
       <div className="">
-        <Navbar />
+        {/* <Navbar /> */}
         <HeroSection />
       </div>
       <Footer />

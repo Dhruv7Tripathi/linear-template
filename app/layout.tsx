@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PortFolio",
+  title: "Liear Template ",
   description: "Created for showcasing my work and skills",
 };
 
@@ -36,7 +36,7 @@ export default function RootLayout({
         disableTransitionOnChange
       >
           <div className="bg-white dark:bg-black">
-            {/* <Navbar /> */}
+            <Navbar />
 
             {children}
             {/* <Footer /> */}
