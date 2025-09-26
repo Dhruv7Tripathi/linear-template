@@ -6,8 +6,9 @@ import Image from "next/image";
 import { FAQSection } from "./faq";
 import { Process } from "./testimonial";
 import { ChevronRight } from "lucide-react";
-import { Button } from "../ui/button";
-
+import { Button as B2 } from "@/components/ui/button";
+import { Button } from "../ui/moving-border";
+import { SiDiscord } from "react-icons/si";
 const HeroSection = () => {
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -29,7 +30,7 @@ const HeroSection = () => {
 
   return (
     <div className="bg-white dark:bg-black  ">
-
+      {/* <Navbar /> */}
       <div className="">
         <motion.section
           className="flex items-center min-h-[calc(60vh)] mt-8 justify-center  mb-28 text-black dark:text-white"
@@ -37,6 +38,12 @@ const HeroSection = () => {
           animate="visible"
         >
           <div className="max-w-7xl mx-auto text-center space-y-6 px-4">
+            <Button
+              borderRadius="1.75rem"
+              className="bg-white dark:bg-black text-black dark:text-white border-neutral-200 dark:border-neutral-800"
+            >
+              Borders are cool
+            </Button>
             <motion.h1
               className="text-4xl md:text-5xl font-sans font-bold"
               variants={itemVariants}
@@ -59,13 +66,14 @@ const HeroSection = () => {
               </motion.button>
               <div
               >
-                <Button
+                <B2
                   size="lg"
                   className="text-base w-full rounded-3xl sm:w-auto bg-white border border-neutral-200 hover:bg-white dark:hover:bg-black dark:bg-black text-neutral-900 dark:text-neutral-100 group"
                 >
+                  <SiDiscord className="mr-2 h-5 w-5" />
                   Community
 
-                </Button>
+                </B2>
               </div>
             </motion.div>
 
