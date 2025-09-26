@@ -32,61 +32,43 @@ const HeroSection = () => {
 
       <div className="">
         <motion.section
-          className="flex items-center justify-center mt-28 mb-28 text-black dark:text-white"
+          className="flex items-center min-h-[calc(60vh)] mt-8 justify-center  mb-28 text-black dark:text-white"
           initial="hidden"
           animate="visible"
         >
           <div className="max-w-7xl mx-auto text-center space-y-6 px-4">
             <motion.h1
-              className="text-4xl md:text-7xl font-sans font-bold"
+              className="text-4xl md:text-5xl font-sans font-bold"
               variants={itemVariants}
             >
-              Optimize Your Workflow
-              <br />
-              with Cutting-Edge Solutions
+              Build the future with Linear
             </motion.h1>
             <motion.p
-              className="max-w-4xl mx-auto font-medium text-zinc-700 dark:text-neutral-500 md:text-xl"
+              className="max-w-[650px] mx-auto font-semibold text-neutral-800 dark:text-neutral-300 md:text-lg"
               variants={itemVariants}
             >
-              Meet our AI-powered SaaS solution to lighten your workload,
-              increase efficiency and make more accurate decisions.
+              A modern, sleek, and responsive landing page template built with
+              Next.js and Tailwind CSS. Perfect for startups and SaaS products.
             </motion.p>
             <motion.div
               className="flex justify-center items-center gap-4"
               variants={itemVariants}
             >
-              <motion.button className="bg-amber-600 text-white px-6 py-3 font-semibold rounded-3xl transition duration-300 shadow-lg shadow-amber-500/25">
+              <motion.button className="bg-black dark:bg-neutral-50 dark:text-neutral-950 text-white px-6 py-3 font-semibold rounded-3xl transition duration-300 ">
                 Start Free Trial
               </motion.button>
-              <motion.div
-                whileHover={{ scale: 1.03 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              <div
               >
                 <Button
                   size="lg"
-                  className="text-base w-full sm:w-auto bg-white dark:bg-black text-neutral-900 dark:text-neutral-100 group"
+                  className="text-base w-full rounded-3xl sm:w-auto bg-white border border-neutral-200 hover:bg-white dark:hover:bg-black dark:bg-black text-neutral-900 dark:text-neutral-100 group"
                 >
-                  Start a Demo
-                  <motion.span
-                    whileHover={{ x: 4 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  >
-                    <ChevronRight className="ml-2 size-4 text-amber-400 transition-transform group-hover:translate-x-1" />
-                  </motion.span>
+                  Community
+
                 </Button>
-              </motion.div>
+              </div>
             </motion.div>
-            <motion.div
-              className="m-4 p-4 bottom-4 w-full z-20 text-center text-sm text-gray-800 dark:text-gray-200"
-              variants={itemVariants}
-            >
-              <p className="flex justify-center gap-4">
-                <span className="text-amber-400">✓</span> No credit card
-                <span className="text-amber-400">✓</span> 14-day trial
-                <span className="text-amber-400">✓</span> Cancel anytime
-              </p>
-            </motion.div>
+
           </div>
         </motion.section>
 

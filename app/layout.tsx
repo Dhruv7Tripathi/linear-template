@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/next"
 import { Navbar } from "@/components/landingpage/navbar";
-import Footer from "@/components/landingpage/footer";
+// import Footer from "@/components/landingpage/footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Liear Template ",
-  description: "Created for showcasing my work and skills",
+  title: "Linear Template | LayrdUI  ",
+  description: "A modern, sleek, and responsive landing page template built with Next.js and Tailwind CSS. Perfect for startups and SaaS products.",
 };
 
 export default function RootLayout({
