@@ -145,7 +145,7 @@ export const Navbar = () => {
         </div>
 
         {/* Right: Actions */}
-        <div className="flex items-center ml-auto space-x-4">
+        <div className="flex items-center ml-auto space-x-3">
           <a
             href="https://github.com/"
             target="_blank"
@@ -155,13 +155,13 @@ export const Navbar = () => {
             <SiGithub size={20} />
             <span className="text-neutral-950 font-semibold dark:text-neutral-50">23.5K</span>
           </a>
+          <Themetoggle />
           <button className="dark:hover:bg-neutral-900 font-semibold hover:bg-neutral-100 rounded-lg py-2 px-4">
             Login
           </button>
           <button className="dark:bg-neutral-900 font-semibold ring ring-neutral-300 dark:ring-neutral-600 bg-neutral-100 text-neutral-950 dark:text-neutral-50 px-4 py-2 rounded-lg hover:bg-white dark:hover:bg-black dark:hover:text-white hover:text-black border border-neutral-200 dark:border-neutral-950 hover:border-white  dark:hover:border-black transition-colors duration-300">
             Sign Up
           </button>
-          <Themetoggle />
         </div>
       </div>
     </nav>

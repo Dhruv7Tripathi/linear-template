@@ -72,7 +72,7 @@ export default function Footer() {
         <motion.div
           variants={containerVariants}
           whileInView="visible"
-          className="relative z-10 max-w-7xl mx-auto px-6 py-16"
+          className="relative z-10 ml-8 mx-auto px-6 py-16"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
             <motion.div variants={itemVariants} className="lg:col-span-2">
@@ -80,14 +80,11 @@ export default function Footer() {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="flex items-center space-x-3 mb-6"
               >
-                <div className="w-10 h-10 bg-white dark:bg-black dark:text-white text-black rounded-lg flex items-center justify-center font-bold text-xl">
-                  S
-                </div>
-                <span className="text-2xl font-bold">Syntax</span>
+                <span className="text-2xl font-bold">Linear</span>
               </motion.div>
-              <motion.p variants={linkVariants} className="text-gray-400 text-sm leading-relaxed">
-                © copyright Syntaxs 2024. All rights reserved.
-              </motion.p>
+              <p className="text-neutral-800 max-w-prose dark:text-neutral-200 text-sm">
+                Linear is a modern project management tool designed for high-performance teams. Built for speed and collaboration.
+              </p>
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-4">
