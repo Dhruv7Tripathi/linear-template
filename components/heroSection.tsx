@@ -24,27 +24,24 @@ const HeroSection = () => {
       >
         <div className="max-w-7xl mx-auto text-center space-y-6 px-4">
           <Button
-            borderRadius="1.75rem"
-            className="bg-white rounded-lg dark:bg-black text-black dark:text-white border-neutral-200 dark:border-neutral-800"
+            borderRadius="0.5rem"
+            className="bg-white rounded-lg mb-5 dark:bg-black text-black dark:text-white border-neutral-200 dark:border-neutral-800"
           >
             Public beta is live! <ChevronRight className="ml-2 mt-0.5 size-4" />
           </Button>
-          <motion.h1
+          <h1
             className="text-4xl md:text-5xl font-sans font-bold"
-            variants={itemVariants}
           >
             Build the future with Linear
-          </motion.h1>
-          <motion.p
+          </h1>
+          <p
             className="max-w-[650px] mx-auto font-semibold text-neutral-800 dark:text-neutral-300 md:text-lg"
-            variants={itemVariants}
           >
             A modern, sleek, and responsive landing page template built with
             Next.js and Tailwind CSS. Perfect for startups and SaaS products.
-          </motion.p>
-          <motion.div
-            className="flex justify-center items-center gap-4"
-            variants={itemVariants}
+          </p>
+          <div
+            className="flex justify-center items-center mt-6 gap-4"
           >
             <motion.button className="bg-black dark:bg-neutral-50 dark:text-neutral-950 text-white px-6 py-3 font-semibold rounded-3xl transition duration-300 ">
               Start Free Trial
@@ -60,7 +57,7 @@ const HeroSection = () => {
 
               </B2>
             </div>
-          </motion.div>
+          </div>
 
         </div>
       </motion.section>

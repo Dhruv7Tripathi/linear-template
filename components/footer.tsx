@@ -1,36 +1,18 @@
 "use client"
 
 import Link from "next/link"
-
-const footerLinks = {
-  pages: [
-    { name: "All Products", href: "/products" },
-    { name: "Clients", href: "/clients" },
-    { name: "Blog", href: "/blog" },
-  ],
-  register: [
-    { name: "Sign Up", href: "/signup" },
-    { name: "Login", href: "/login" },
-    { name: "Forgot Password", href: "/forgot-password" },
-  ],
-  legal: [
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
-  ],
-}
+import { footerLinks } from "@/contants"
 
 export default function Footer() {
   return (
-    <footer className="relative border-t-2 border-neutral-200 dark:border-neutral-800/50 bg-white dark:bg-black dark:text-neutral-50 text-neutral-900 overflow-hidden">
+    <footer className="relative border-t border-neutral-200 dark:border-neutral-800/50 bg-white dark:bg-black dark:text-neutral-50 text-neutral-900 overflow-hidden">
       <div className="relative z-10 mx-auto px-6 py-16 ml-8 mr-8">
         <div className="flex flex-col lg:flex-row justify-between gap-12">
 
           {/* Branding & Description */}
-          <div className="lg:max-w-md">
-            <div className="flex items-center space-x-3 mb-6">
-              <span className="text-2xl font-bold">Linear</span>
-            </div>
-            <p className="text-neutral-800 dark:text-neutral-200 text-sm ">
+          <div className="flex flex-col space-y-4 ">
+            <h1 className="text-2xl font-bold">Linear</h1>
+            <p className="text-neutral-800 dark:text-neutral-200 text-sm max-w-prose">
               Linear is a modern project management tool designed for high-performance teams. Built for speed and collaboration.
             </p>
           </div>

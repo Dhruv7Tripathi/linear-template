@@ -30,3 +30,20 @@ export const faqData = [
       "Yes, comprehensive documentation is provided to guide you through setup, customization, and deployment.",
   },
 ]
+
+export const footerLinks = {
+  pages: [
+    { name: "All Products", href: "/products" },
+    { name: "Clients", href: "/clients" },
+    { name: "Blog", href: "/blog" },
+  ],
+  register: [
+    { name: "Sign Up", href: "/signup" },
+    { name: "Login", href: "/login" },
+    { name: "Forgot Password", href: "/forgot-password" },
+  ],
+  legal: [
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+  ],
+}
