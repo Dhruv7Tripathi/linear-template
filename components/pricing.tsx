@@ -1,4 +1,6 @@
 import { PricingSection } from "@/components/ui/pricing-section"
+import { Button } from "./ui/button";
+import { MdWorkspacePremium } from "react-icons/md";
 
 export const PAYMENT_FREQUENCIES = ["monthly", "yearly"]
 
@@ -55,17 +57,46 @@ export const TIERS = [
     ],
     cta: "Get started",
   },
+  {
+    id: "Custom",
+    name: "Custom",
+    price: {
+      monthly: 120,
+      yearly: 100,
+    },
+    description: "Great for large businesses",
+    features: [
+      "Unlimited phone calls",
+      "15 second checks",
+      "Single-user account",
+      "50 monitors",
+      "Up to 10 seats",
+    ],
+    cta: "Get started",
+  },
 ]
 
 export function Pricing() {
   return (
-    <div className="relative flex justify-center items-center w-full mt-20 scale-90">
-      <PricingSection
-        title="Pricing for teams of all sizes"
-        subtitle="Choose the best plan for your needs"
-        frequencies={PAYMENT_FREQUENCIES}
-        tiers={TIERS}
-      />
+    <div className="justify-center flex flex-col  w-full mt-8 scale-90">
+      <div className="space-y-7 ">
+        <div className="">
+          <Button variant="outline" size="sm" className="gap-2 bg-transparent">
+            <MdWorkspacePremium className="size-4" />
+            Spenders Lounge
+          </Button>
+        </div>
+        <div className="space-y-4">
+          <h1 className="text-4xl font-medium md:text-5xl">Pricing for teams of all sizes</h1>
+          <p className="text-neutral-700 dark:text-neutral-300">Choose the best plan for your needs</p>
+        </div>
+      </div>
+      <div className="w-full ">
+        <PricingSection
+          frequencies={PAYMENT_FREQUENCIES}
+          tiers={TIERS}
+        />
+      </div>
     </div>
   );
 }

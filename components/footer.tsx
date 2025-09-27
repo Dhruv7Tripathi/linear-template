@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { footerLinks } from "@/contants"
-
+import Image from "next/image"
 export default function Footer() {
   return (
     <footer className="relative border-t border-neutral-200 dark:border-neutral-800/50 bg-white dark:bg-black dark:text-neutral-50 text-neutral-900 overflow-hidden">
@@ -11,7 +11,18 @@ export default function Footer() {
 
           {/* Branding & Description */}
           <div className="flex flex-col space-y-4 ">
-            <h1 className="text-2xl font-bold">Linear</h1>
+            <Link href="/" className="flex space-x-2 items-center">
+              <Image
+                width={500}
+                height={500}
+                src={"/logo.png"}
+                alt="Linear Logo"
+                quality={100}
+                priority={true}
+                className="mt-1 h-10 w-10 flex-shrink-0 rounded-xl object-cover"
+              />
+              <h3 className="text-xl font-bold text-black dark:text-white">Linear</h3>
+            </Link>
             <p className="text-neutral-800 dark:text-neutral-200 text-sm max-w-prose">
               Linear is a modern project management tool designed for high-performance teams. Built for speed and collaboration.
             </p>

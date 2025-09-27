@@ -9,7 +9,7 @@ import { ChevronDown, Menu } from "lucide-react"
 import { SiGithub } from "react-icons/si"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
-
+import Link from "next/link"
 const features = [
   {
     title: "Smart Productivity",
@@ -79,11 +79,22 @@ export const Navbar = () => {
         "w-full z-50 transition-all border-b-2 dark:border-neutral-900 border-neutral-200 duration-300 bg-white dark:bg-black backdrop-blur-md",
       )}
     >
-      <div className="w-full flex items-center justify-between px-4 sm:px-6 lg:px-12 py-3">
+      <div className="w-full flex items-center justify-between px-1 sm:px-2 lg:px-4 py-3">
         {/* Left: Logo and Nav */}
-        <div className="flex items-center space-x-3">
-          <Image src="/logo.jpeg" alt="Linear Logo" width={30} height={30} className="rounded" />
-          <span className="text-xl sm:text-2xl font-bold">Linear</span>
+        <div className="flex items-center space-x-1">
+          <Link href="/" className="flex space-x-2 items-center">
+            <Image
+              width={500}
+              height={500}
+              src={"/logo.png"}
+              alt="Linear Logo"
+              quality={100}
+              priority={true}
+              className="mt-1 h-10 w-10 flex-shrink-0 rounded-xl object-cover"
+            />
+            <h3 className="text-xl font-bold text-black dark:text-white">Linear</h3>
+          </Link>
+
 
           <div className="hidden md:flex px-4 lg:px-8 text-sm font-semibold space-x-4 lg:space-x-6 text-neutral-800 dark:text-neutral-200">
             {/* Dropdown */}
@@ -138,6 +149,13 @@ export const Navbar = () => {
               onMouseEnter={() => setIsProductOpen(false)}
             >
               FAQ
+            </a>
+            <a
+              href="#blog"
+              className="hover:bg-neutral-100 py-2 px-3 rounded-lg dark:hover:bg-neutral-900 dark:text-neutral-50 text-neutral-950"
+              onMouseEnter={() => setIsProductOpen(false)}
+            >
+              Blog
             </a>
             <a
               href="#contact"
