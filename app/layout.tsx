@@ -36,10 +36,10 @@ export default function RootLayout({
         disableTransitionOnChange
       >
           <div className="bg-white dark:bg-black">
-            <Navbar />
-            <div className="border-l border border-r border-neutral-200 dark:border-neutral-900 min-h-[calc(100vh-72px)] ml-12 mr-12">
-              {children}
-            </div>
+
+            {/* <div className="border-l border border-r border-neutral-200 dark:border-neutral-900 min-h-[calc(100vh-72px)] ml-12 mr-12"> */}
+            {children}
+            {/* </div> */}
 
           </div>
         </ThemeProvider>

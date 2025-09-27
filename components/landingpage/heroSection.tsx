@@ -40,7 +40,7 @@ const HeroSection = () => {
           <div className="max-w-7xl mx-auto text-center space-y-6 px-4">
             <Button
               borderRadius="1.75rem"
-              className="bg-white dark:bg-black text-black dark:text-white border-neutral-200 dark:border-neutral-800"
+              className="bg-white rounded-lg dark:bg-black text-black dark:text-white border-neutral-200 dark:border-neutral-800"
             >
               Borders are cool
             </Button>
@@ -86,7 +86,6 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className="relative"
         >
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[1150px] h-[100px] bg-orange-500 blur-[100px] -z-15" />
           <div className="relative z-10 rounded-2xl w-[1300px] h-[800px] bg-neutral-900/60 backdrop-blur-md mx-auto mt-8 overflow-hidden">
             <Image
               src="/l.webp"
