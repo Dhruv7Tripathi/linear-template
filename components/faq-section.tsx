@@ -4,7 +4,7 @@ import { HelpCircle } from "lucide-react"
 import { faqData } from "@/contants"
 export default function FAQ() {
   return (
-    <div className="min-h-screen bg-white dark:bg-black">
+    <div className="min-h-screen border-t border-neutral-200 dark:border-neutral-900 bg-white dark:bg-black">
       {/* FAQ Button */}
       <div className=" ml-8 mt-6">
 

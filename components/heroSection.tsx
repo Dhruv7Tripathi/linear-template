@@ -18,19 +18,19 @@ const HeroSection = () => {
   return (
     <div className="border-b border-neutral-200 dark:border-neutral-900 ">
       <motion.section
-        className="flex items-center min-h-[calc(60vh)] mt-8 justify-center  mb-28 text-black dark:text-white"
+        className="flex items-center min-h-[calc(60vh)] mt-8 mb-24 justify-center text-black dark:text-white"
         initial="hidden"
         animate="visible"
       >
         <div className="max-w-7xl mx-auto text-center space-y-6 px-4">
           <Button
             borderRadius="0.5rem"
-            className="bg-white rounded-lg mb-5 dark:bg-black text-black dark:text-white border-neutral-200 dark:border-neutral-800"
+            className="bg-white rounded-lg dark:bg-black text-black dark:text-white border-neutral-200 dark:border-neutral-800"
           >
-            Public beta is live! <ChevronRight className="ml-2 mt-0.5 size-4" />
+            Public beta is live  <ChevronRight className="ml-2 mt-0.5 size-4" />
           </Button>
           <h1
-            className="text-4xl md:text-5xl font-sans font-bold"
+            className="text-5xl md:text-6xl mt-8 font-sans font-bold"
           >
             Build the future with Linear
           </h1>
@@ -41,22 +41,20 @@ const HeroSection = () => {
             Next.js and Tailwind CSS. Perfect for startups and SaaS products.
           </p>
           <div
-            className="flex justify-center items-center mt-6 gap-4"
-          >
+            className="flex justify-center items-center mt-12  gap-4">
             <motion.button className="bg-black dark:bg-neutral-50 dark:text-neutral-950 text-white px-6 py-3 font-semibold rounded-3xl transition duration-300 ">
               Start Free Trial
             </motion.button>
-            <div
-            >
-              <B2
-                size="lg"
-                className="text-base w-full rounded-3xl sm:w-auto bg-white border border-neutral-200 hover:bg-white dark:hover:bg-black dark:bg-black text-neutral-900 dark:text-neutral-100 group"
-              >
-                <SiDiscord className="mr-2 h-5 w-5" />
-                Community
 
-              </B2>
-            </div>
+            <B2
+              size="lg"
+              className="text-base w-full rounded-3xl sm:w-auto bg-white border border-neutral-200 hover:bg-white dark:hover:bg-black dark:bg-black text-neutral-900 dark:text-neutral-100 group"
+            >
+              <SiDiscord className="mr-2 h-5 w-5" />
+              Community
+
+            </B2>
+
           </div>
 
         </div>
