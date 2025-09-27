@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { Button as B2 } from "@/components/ui/button";
-import { Button } from "../ui/moving-border";
+import { Button } from "./ui/moving-border";
 import { SiDiscord } from "react-icons/si";
 import SelectedBrands from "./brands";
 const HeroSection = () => {
@@ -16,7 +16,7 @@ const HeroSection = () => {
     },
   };
   return (
-    <div className="border-b border-neutral-200 dark:border-neutral-900  mx-12">
+    <div className="border-b border-neutral-200 dark:border-neutral-900 ">
       <motion.section
         className="flex items-center min-h-[calc(60vh)] mt-8 justify-center  mb-28 text-black dark:text-white"
         initial="hidden"

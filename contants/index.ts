@@ -1,27 +1,32 @@
-
 export const faqData = [
   {
-    question: "What is the purpose of this website?",
-    answer: "This website helps users discover and buy the best products curated from multiple sources.",
+    question: "What is the Linear template?",
+    answer:
+      "The Linear template is a pre-built project structure designed to help you quickly start building modern web applications with best practices and efficient workflows.",
   },
   {
-    question: "How do I contact support?",
-    answer: "You can contact support via our support page or by emailing support@example.com.",
+    question: "Why should I use the Linear template?",
+    answer:
+      "Using the Linear template saves you time by providing a solid foundation, including optimized configurations, reusable components, and integration with popular tools.",
   },
   {
-    question: "How do I find the best products?",
-    answer: "We use smart filtering and user reviews to show you top-rated products.",
+    question: "Can I customize the Linear template?",
+    answer:
+      "Yes, the Linear template is fully customizable. You can modify components, styles, and configurations to fit your specific project requirements.",
   },
   {
-    question: "Can I return a product?",
-    answer: "Yes, we offer hassle-free returns within 30 days of delivery.",
+    question: "Does the Linear template support TypeScript?",
+    answer:
+      "Absolutely. The Linear template is built with TypeScript, ensuring type safety and improved developer experience.",
   },
   {
-    question: "Do you offer international shipping?",
-    answer: "Yes, we ship to over 50 countries. Shipping rates vary by location.",
+    question: "How do I get started with the Linear template?",
+    answer:
+      "Simply clone the repository, install dependencies, and follow the documentation to launch your project in minutes.",
   },
   {
-    question: "How can I track my order?",
-    answer: "Once shipped, you'll receive a tracking number via email.",
+    question: "Is there documentation available?",
+    answer:
+      "Yes, comprehensive documentation is provided to guide you through setup, customization, and deployment.",
   },
 ]

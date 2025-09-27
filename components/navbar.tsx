@@ -3,7 +3,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import { Themetoggle } from '../ui/themetoggle';
+import { Themetoggle } from './ui/themetoggle';
 import Image from 'next/image';
 import { ChevronDown } from 'lucide-react';
 import { SiGithub } from 'react-icons/si';
