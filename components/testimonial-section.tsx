@@ -82,7 +82,7 @@ const testimonials: Testimonial[] = [
     company: "Loom",
     logo: <SiLoom />,
     quote:
-      "The smart reminders and automated scheduling keep our team focused and on track. We've also found the collaborative features to be very helpful.",
+      "The smart reminders and automated scheduling keep our team focused and on track. Weve also found the collaborative features to be very helpful.",
     author: {
       name: "Matthew Kim",
       title: "Content Strategist, Loom",
@@ -98,7 +98,7 @@ export function TestimonialsSection() {
         <div className="mb-4">
           <Button variant="outline" size="sm" className="gap-2 bg-transparent">
             <FaSmileBeam className="size-4" />
-            lovin'it
+            lovin&apos; it
           </Button>
         </div>
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-neutral-100 mb-3 sm:mb-4 text-balance">
@@ -118,7 +118,7 @@ export function TestimonialsSection() {
             </div>
 
             <blockquote className="text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed sm:leading-relaxed md:leading-loose mb-4 sm:mb-5 md:mb-6 flex-grow">
-              "{testimonial.quote}"
+              {testimonial.quote}
             </blockquote>
 
             <div className="flex items-center gap-2 sm:gap-3 mt-auto">
