@@ -78,15 +78,15 @@ export const TIERS = [
 
 export function Pricing() {
   return (
-    <div className="justify-center flex flex-col  w-full mt-8 scale-90">
-      <div className="space-y-7 ">
+    <div className="justify-center flex flex-col  mt-8 ">
+      <div className="space-y-7 ml-8 mb-8 sm:mb-1 md:mb-3 lg:mb-6">
         <div className="">
           <Button variant="outline" size="sm" className="gap-2 bg-transparent">
             <MdWorkspacePremium className="size-4" />
             Spenders Lounge
           </Button>
         </div>
-        <div className="space-y-4">
+        <div className="space-y-4 ">
           <h1 className="text-4xl font-medium md:text-5xl">Pricing for teams of all sizes</h1>
           <p className="text-neutral-700 dark:text-neutral-300">Choose the best plan for your needs</p>
         </div>

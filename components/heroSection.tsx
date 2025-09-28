@@ -18,7 +18,7 @@ const HeroSection = () => {
   return (
     <div className="border-b border-neutral-200 dark:border-neutral-900 ">
       <motion.section
-        className="flex items-center min-h-[calc(60vh)] mt-8 mb-24 justify-center text-black dark:text-white"
+        className="flex items-center min-h-[calc(60vh)]  mb-24 justify-center text-black dark:text-white"
         initial="hidden"
         animate="visible"
       >

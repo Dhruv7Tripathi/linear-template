@@ -4,13 +4,15 @@ import Footer from "@/components/footer";
 import BottomSection from "@/components/bottom-section";
 import FAQ from "@/components/faq-section";
 import { Pricing } from "@/components/pricing";
+import { TestimonialsSection } from "@/components/testimonial-section";
 export default function HomePage() {
   return (
     <div className="bg-white dark:bg-black text-gray-900 dark:text-gray-100">
       <Navbar />
-      <div className="border-l border border-r border-neutral-200 dark:border-neutral-900 min-h-[calc(100vh-72px)] ml-12 mr-12">
+      <div className="border-l  border-r border-neutral-200 dark:border-neutral-900 min-h-[calc(100vh-82px)] ml-12 mr-12">
         <HeroSection />
         <Pricing />
+        <TestimonialsSection />
         <FAQ />
         <Footer />
         <BottomSection />
