@@ -91,7 +91,7 @@ export function Pricing() {
           <p className="text-neutral-700 dark:text-neutral-300">Choose the best plan for your needs</p>
         </div>
       </div>
-      <div className="w-full ">
+      <div className="">
         <PricingSection
           frequencies={PAYMENT_FREQUENCIES}
           tiers={TIERS}

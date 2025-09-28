@@ -1,7 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import HeroSection from "@/components/heroSection";
 import Footer from "@/components/footer";
-import BottomSection from "@/components/bottom-section";
 import FAQ from "@/components/faq-section";
 import { Pricing } from "@/components/pricing";
 import { TestimonialsSection } from "@/components/testimonial-section";
@@ -15,10 +14,8 @@ export default function HomePage() {
         <TestimonialsSection />
         <FAQ />
         <Footer />
-        <BottomSection />
       </div>
 
-      {/* Footer outside */}
     </div>
   );
 }

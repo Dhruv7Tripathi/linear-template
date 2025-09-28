@@ -95,7 +95,7 @@ export function TestimonialsSection() {
   return (
     <section className="py-8 sm:py-12 md:py-16 lg:py-20 border-t border-neutral-200 dark:border-neutral-900 bg-white dark:bg-black ">
       <div className="ml-8 mb-8 sm:mb-10 md:mb-12">
-        <div className="mb-1">
+        <div className="mb-4">
           <Button variant="outline" size="sm" className="gap-2 bg-transparent">
             <FaSmileBeam className="size-4" />
             lovin'it

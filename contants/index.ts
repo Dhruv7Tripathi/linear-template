@@ -40,7 +40,7 @@ export const footerLinks = {
   register: [
     { name: "Sign Up", href: "/signup" },
     { name: "Login", href: "/login" },
-    { name: "Forgot Password", href: "/forgot-password" },
+    // { name: "Forgot Password", href: "/forgot-password" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy" },
