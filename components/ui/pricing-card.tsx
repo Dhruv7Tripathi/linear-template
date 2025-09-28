@@ -31,22 +31,35 @@ export function PricingCard({ tier, paymentFrequency }: PricingCardProps) {
   return (
     <Card
       className={cn(
-        "relative flex flex-col gap-8 overflow-hidden p-6",
-        isHighlighted
-          ? "bg-foreground text-background"
-          : "bg-background text-foreground",
-        isPopular && "ring-2 ring-primary"
+        "relative flex flex-col bg-background text-foreground overflow-hidden transition-all duration-300",
+        // Small screens
+        "gap-4 p-4 min-h-[400px]",
+        // Medium screens  
+        "sm:gap-6 sm:p-5 sm:min-h-[450px]",
+        // Large screens
+        "lg:gap-8 lg:p-6 lg:min-h-[500px]",
+        // Highlighted/Popular styling
+        isHighlighted && "border-2 border-primary shadow-lg scale-105",
+        // isPopular && "ring-2 ring-primary/20"
       )}
     >
-      {isHighlighted && <HighlightedBackground />}
-      {isPopular && <PopularBackground />}
 
-      <h2 className="flex items-center gap-3 text-xl font-medium capitalize">
+      {/* Plan Name */}
+      <h2 className={cn(
+        "flex items-center gap-3 font-medium capitalize",
+        // Responsive text sizes
+        "text-lg sm:text-xl lg:text-2xl",
+        isPopular && "mt-2"
+      )}>
         {tier.name}
-
       </h2>
 
-      <div className="relative h-12">
+      {/* Price Section */}
+      <div className={cn(
+        "relative",
+        // Responsive height
+        "h-10 sm:h-12 lg:h-14"
+      )}>
         {typeof price === "number" ? (
           <>
             <NumberFlow
@@ -56,50 +69,108 @@ export function PricingCard({ tier, paymentFrequency }: PricingCardProps) {
                 trailingZeroDisplay: "stripIfInteger",
               }}
               value={price}
-              className="text-4xl font-medium"
+              className={cn(
+                "font-medium",
+                // Responsive text sizes
+                "text-2xl sm:text-3xl lg:text-4xl"
+              )}
             />
-            <p className="-mt-2 text-xs text-muted-foreground">
+            <p className={cn(
+              "text-muted-foreground",
+              // Responsive spacing and text
+              "-mt-1 sm:-mt-2 text-xs sm:text-sm"
+            )}>
               Per month/user
             </p>
           </>
         ) : (
-          <h1 className="text-4xl font-medium">{price}</h1>
+          <h1 className={cn(
+            "font-medium",
+            // Responsive text sizes
+            "text-2xl sm:text-3xl lg:text-4xl"
+          )}>
+            {price}
+          </h1>
         )}
       </div>
 
-      <div className="flex-1 space-y-2">
-        <h3 className="text-sm font-medium">{tier.description}</h3>
-        <ul className="space-y-2">
+      {/* Description and Features */}
+      <div className="flex-1 space-y-3 sm:space-y-4">
+        <h3 className={cn(
+          "font-medium",
+          // Responsive text sizes
+          "text-sm sm:text-base lg:text-lg"
+        )}>
+          {tier.description}
+        </h3>
+
+        <ul className={cn(
+          "space-y-2 sm:space-y-3",
+          // Responsive max height with scroll on small screens if needed
+          "max-h-48 sm:max-h-60 lg:max-h-none overflow-y-auto"
+        )}>
           {tier.features.map((feature, index) => (
             <li
               key={index}
               className={cn(
-                "flex items-center gap-2 text-sm font-medium",
+                "flex items-start gap-2 font-medium",
+                // Responsive text sizes
+                "text-xs sm:text-sm lg:text-base",
                 isHighlighted ? "text-background" : "text-muted-foreground"
               )}
             >
-              <BadgeCheck className="h-4 w-4" />
-              {feature}
+              <BadgeCheck className={cn(
+                "flex-shrink-0 mt-0.5",
+                // Responsive icon sizes
+                "h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5"
+              )} />
+              <span className="leading-tight">{feature}</span>
             </li>
           ))}
         </ul>
       </div>
 
+      {/* CTA Button */}
       <Button
-        variant={isHighlighted ? "secondary" : "default"}
-        className="w-full"
+        variant={isHighlighted ? "default" : "secondary"}
+        className={cn(
+          "w-full transition-all duration-200",
+          // Responsive padding and text
+          "py-2 sm:py-3 lg:py-4 text-sm sm:text-base",
+          isHighlighted && "bg-white text-black hover:bg-gray-100 shadow-md",
+          // Hover effects
+          "hover:shadow-lg hover:scale-[1.02]"
+        )}
       >
-        {tier.cta}
-        <ArrowRight className="ml-2 h-4 w-4" />
+        <span className="flex-1">{tier.cta}</span>
+        <ArrowRight className={cn(
+          "ml-2 transition-transform duration-200 group-hover:translate-x-1",
+          // Responsive icon sizes
+          "h-3 w-3 sm:h-4 sm:w-4"
+        )} />
       </Button>
     </Card>
   )
 }
 
-const HighlightedBackground = () => (
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:45px_45px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
-)
-
-const PopularBackground = () => (
-  <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.1),rgba(255,255,255,0))]" />
-)
+// Optional: Container component for responsive grid layout
+export function PricingGrid({
+  children,
+  className
+}: {
+  children: React.ReactNode
+  className?: string
+}) {
+  return (
+    <div className={cn(
+      "grid gap-4 sm:gap-6 lg:gap-8",
+      // Responsive grid columns
+      "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
+      // Center single cards on larger screens
+      "place-items-center sm:place-items-stretch",
+      className
+    )}>
+      {children}
+    </div>
+  )
+}
