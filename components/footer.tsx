@@ -66,24 +66,6 @@ export default function Footer() {
                   ))}
                 </ul>
               </div>
-
-              {/* Legal */}
-              {/* <div>
-              <h3 className="text-lg font-semibold dark:text-neutral-100 text-neutral-900 mb-4">Legal</h3>
-              <ul className="space-y-3">
-                {footerLinks.legal.map((link, index) => (
-                  <li key={`legal-${index}`}>
-                    <Link
-                      href={link.href}
-                      className="text-neutral-900 dark:text-neutral-100 dark:hover:text-white hover:text-white transition-colors duration-200 text-sm"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div> */}
-
             </div>
           </div>
         </div>

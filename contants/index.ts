@@ -33,17 +33,12 @@ export const faqData = [
 
 export const footerLinks = {
   pages: [
-    { name: "All Products", href: "/products" },
-    { name: "Clients", href: "/clients" },
-    { name: "Blog", href: "/blog" },
+    { name: "All Products", href: "/#products" },
+    { name: "Clients", href: "/#clients" },
+    { name: "Blog", href: "/#blog" },
   ],
   register: [
-    { name: "Sign Up", href: "/signup" },
-    { name: "Login", href: "/login" },
-    // { name: "Forgot Password", href: "/forgot-password" },
-  ],
-  legal: [
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
-  ],
+    { name: "Sign Up", href: "/#signup" },
+    { name: "Login", href: "/#login" },
+  ]
 }

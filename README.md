@@ -23,7 +23,6 @@ cd linear-template
 
 ```bash
 npm install
-
 yarn install
 ```
 
@@ -31,7 +30,6 @@ yarn install
 
 ```bash
 npm run dev
-# or
 yarn dev
 ```
 
