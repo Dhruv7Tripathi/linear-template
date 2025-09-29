@@ -76,7 +76,7 @@ export const Navbar = () => {
   return (
     <nav
       className={cn(
-        "w-full z-50 transition-all border-b-2 dark:border-neutral-900 border-neutral-200 duration-300 bg-white dark:bg-black backdrop-blur-md",
+        "w-full  transition-all border-b-2 dark:border-neutral-900 border-neutral-200 duration-300 bg-white dark:bg-black backdrop-blur-md",
       )}
     >
       <div className="w-full flex items-center justify-between px-1 sm:px-2 lg:px-4 py-3">
@@ -96,7 +96,7 @@ export const Navbar = () => {
           </Link>
 
 
-          <div className="hidden md:flex px-4 lg:px-8 text-sm font-semibold space-x-4 lg:space-x-6 text-neutral-800 dark:text-neutral-200">
+          <div className="hidden z-50 md:flex px-4 lg:px-8 text-sm font-semibold space-x-4 lg:space-x-6 text-neutral-800 dark:text-neutral-200">
             {/* Dropdown */}
             <div className="relative" onMouseEnter={() => setIsProductOpen(true)}>
               {/* Button */}
@@ -119,7 +119,7 @@ export const Navbar = () => {
                   closed: { opacity: 0, y: -10, pointerEvents: "none" },
                 }}
                 transition={{ duration: 0.2 }}
-                className="absolute top-full left-0 mt-2 w-[280px] lg:w-[320px] bg-white dark:bg-black text-black dark:text-white rounded-lg shadow-lg border border-neutral-300 dark:border-neutral-800 z-50"
+                className="absolute top-full left-0 mt-2 w-[280px] lg:w-[320px] bg-white dark:bg-black text-black dark:text-white z-50 rounded-lg shadow-lg border border-neutral-300 dark:border-neutral-800 "
               >
                 <div className="p-4 space-y-4">
                   {features.map((item, idx) => (

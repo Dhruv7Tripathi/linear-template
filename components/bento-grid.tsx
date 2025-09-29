@@ -6,8 +6,8 @@ import { useMemo } from "react"
 import { cn } from "@/lib/utils"
 import { TbLayoutGrid } from 'react-icons/tb';
 import { Button } from "./ui/button"
-import InsightPicker from "./ui/instant-picker"
 import EventCard from "./ui/event-card"
+import GlideSelect from "./ui/glide-select";
 type TaskRow = {
   task: string
   assignees: string[]
@@ -143,11 +143,10 @@ function TasksCard() {
   )
 }
 
-/* --- Demo Card 2: Meeting Reminder --- */
 function MeetingCard() {
   return (
     <div className="mt-6">
-      <InsightPicker />
+      <GlideSelect steps={steps} />
     </div>
   )
 }
@@ -167,6 +166,25 @@ function AnalyticsCard() {
     </div>
   )
 }
+const steps = [
+  {
+    title: "Start from Scratch",
+    description: "Design and build everything your way.",
+  },
+  {
+    title: "Use a Template",
+    description: "Get a ready-made starter to save time.",
+  },
+  {
+    title: "Remix an Existing UI",
+    description: "Take inspiration and make it your own.",
+  },
+  {
+    title: "Explore Component Library",
+    description: "Drop in ready-made components with ease.",
+  },
+];
+
 
 export default function BentoSection() {
   return (
