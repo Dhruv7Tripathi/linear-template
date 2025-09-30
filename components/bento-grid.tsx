@@ -188,7 +188,7 @@ const steps = [
 
 export default function BentoSection() {
   return (
-    <div className="pb-16">
+    <div className="pb-16 lg:mx-0 md:mx-auto  px-4 sm:px-6 ">
       <SectionIntro />
 
       {/* Features grid */}

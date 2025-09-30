@@ -7,7 +7,7 @@ export default function FAQ() {
   return (
     <div className="min-h-screen border-t border-neutral-200 dark:border-neutral-900 bg-white dark:bg-black">
       {/* FAQ Button and Header */}
-      <div className="px-4 sm:px-3 md:px-6 lg:px-8 xl:px-12 pt-6 sm:pt-8 md:pt-10">
+      <div className="px-4 lg:mx-0 md:mx-auto sm:px-3 md:px-6 lg:px-8 xl:px-12 pt-6 sm:pt-8 md:pt-10">
         <div className="mb-6 sm:mb-8">
           <Button variant="outline" size="sm" className="gap-2 bg-transparent">
             <HelpCircle className="size-4" />
