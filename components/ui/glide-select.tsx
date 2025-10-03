@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import { VscListSelection } from "react-icons/vsc";
 import { HiOutlineSelector } from "react-icons/hi";
-import { AnimatePresence, motion } from "motion/react";
+// import { AnimatePresence, motion } from "motion/react";
 import React, { useEffect, useState } from "react";
 
 type StepDetail = {
@@ -72,7 +72,7 @@ const GlideSelect = ({
         >
           <div className="flex items-center gap-2">
             <VscListSelection className="mt-0.5 size-[14px] text-neutral-600 dark:text-neutral-400" />
-            <AnimatePresence mode="wait">
+            {/* <AnimatePresence mode="wait">
               <motion.p
                 key={steps[currentStep].title}
                 initial={{ opacity: 0, y: 6, filter: "blur(2px)" }}
@@ -82,7 +82,7 @@ const GlideSelect = ({
               >
                 {steps[currentStep].title}
               </motion.p>
-            </AnimatePresence>
+            </AnimatePresence> */}
           </div>
           <span>
             <HiOutlineSelector className="mt-0.5 size-[14px] text-neutral-600 dark:text-neutral-400" />
@@ -96,13 +96,13 @@ const GlideSelect = ({
             "bg-neutral-100 dark:bg-[#101010]",
           )}
         >
-          <div
+          {/* <div
             style={{
               top: `${positions[currentStep]}px`,
               transition: "top 0.6s ease-in-out",
             }}
             className="absolute inset-x-0 left-0 mx-auto h-[56px] w-[94%] rounded-md bg-neutral-200 dark:bg-neutral-900"
-          />
+          /> */}
 
           {steps.map((step, idx) => (
             <div
@@ -116,7 +116,7 @@ const GlideSelect = ({
                 <span
                   className={cn(
                     "h-[8px] w-[8px] rounded-[1px] transition-colors delay-100 duration-700 ease-in-out",
-                    idx === currentStep ? "bg-green-400" : "bg-primary/30",
+                    idx === currentStep ? "bg-primary/30" : "bg-primary/30",
                   )}
                 />
               </div>

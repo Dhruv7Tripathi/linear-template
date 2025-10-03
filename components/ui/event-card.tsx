@@ -16,12 +16,12 @@ type EventCardProps = {
 const EventCard = ({
   firstEvent = "Solana Meet: BLR",
   firstEventTime = "8:30–11PM",
-  secondEvent = "UX Testing Slot",
-  secondEventTime = "5:30–8:30PM",
+  // secondEvent = "UX Testing Slot",
+  // secondEventTime = "5:30–8:30PM",
   cardTitle = "Event Timeline",
   cardDescription = "Visualize and navigate your daily flow with beautifully animated, color-coded time blocks.",
 }: EventCardProps) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [, setIsHovered] = useState(false);
   const [screenSize, setScreenSize] = useState<'sm' | 'md' | 'lg'>('lg');
 
   useEffect(() => {
@@ -125,27 +125,27 @@ const EventCard = ({
     },
   };
 
-  const secondTimeVariant: Variants = {
-    open: {
-      opacity: 1,
-      y: 0,
-      height: "auto",
-      transition: { duration: 0.35, ease: "easeInOut", delay: 0.45 },
-    },
-    close: {
-      opacity: 0,
-      y: 5,
-      height: 0,
-      transition: { duration: 0.35, ease: "easeInOut", delay: 0 },
-    },
-  };
+  // const secondTimeVariant: Variants = {
+  //   open: {
+  //     opacity: 1,
+  //     y: 0,
+  //     height: "auto",
+  //     transition: { duration: 0.35, ease: "easeInOut", delay: 0.45 },
+  //   },
+  //   close: {
+  //     opacity: 0,
+  //     y: 5,
+  //     height: 0,
+  //     transition: { duration: 0.35, ease: "easeInOut", delay: 0 },
+  //   },
+  // };
 
   return (
     <motion.div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       initial="close"
-      animate={isHovered ? "open" : "close"}
+      // animate={isHovered ? "open" : "close"}
       className={cn(
         "relative flex w-full flex-col justify-center rounded-md px-0.5 pb-0.5 pt-0.5",
         // Responsive max widths
@@ -203,11 +203,11 @@ const EventCard = ({
                     width: `${responsiveValues.eventWidth}px`,
                   }}
                 >
-                  <motion.div
+                  {/* <motion.div
                     animate={{ opacity: isHovered ? 1 : 0 }}
                     transition={{ duration: 0.4, ease: "easeInOut" }}
                     className="absolute inset-0 rounded-sm bg-neutral-400 dark:bg-neutral-900"
-                  />
+                  /> */}
                   <div className="relative flex w-full items-center justify-between">
                     <span className={cn(
                       "rounded-sm bg-neutral-300 dark:bg-neutral-400",
@@ -242,7 +242,7 @@ const EventCard = ({
                 </div>
 
                 {/* Second Event */}
-                <div
+                {/* <div
                   className={cn(
                     "absolute flex min-h-8 items-center justify-between rounded-sm p-1",
                     "bg-neutral-400 dark:bg-neutral-900",
@@ -289,7 +289,7 @@ const EventCard = ({
                       "h-[8px] w-[2.5px] sm:h-[10px] sm:w-[3px]"
                     )} />
                   </div>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           </div>

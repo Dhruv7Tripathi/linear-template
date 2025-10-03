@@ -14,7 +14,7 @@ type TaskRow = {
   status: "Progress" | "Done" | "Paused" | "Not started"
   priority: "High" | "Medium" | "Low"
 }
-
+// import StatsCard from "./ui/stats-card";
 function SectionIntro() {
   return (
     <header className="pt-10 ml-8 sm:pt-16 lg:pt-20">
