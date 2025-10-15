@@ -138,13 +138,12 @@ export function PricingCard({ tier, paymentFrequency }: PricingCardProps) {
           // Responsive padding and text
           "py-2 sm:py-3 lg:py-4 text-sm sm:text-base",
           isHighlighted && "bg-white text-black hover:bg-gray-100 shadow-md",
-          // Hover effects
-          "hover:shadow-lg hover:scale-[1.02]"
+
         )}
       >
         <span className="flex-1">{tier.cta}</span>
         <ArrowRight className={cn(
-          "ml-2 transition-transform duration-200 group-hover:translate-x-1",
+          "ml-2 transition-transform duration-200",
           // Responsive icon sizes
           "h-3 w-3 sm:h-4 sm:w-4"
         )} />

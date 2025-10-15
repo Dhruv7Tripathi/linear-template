@@ -125,30 +125,14 @@ const EventCard = ({
     },
   };
 
-  // const secondTimeVariant: Variants = {
-  //   open: {
-  //     opacity: 1,
-  //     y: 0,
-  //     height: "auto",
-  //     transition: { duration: 0.35, ease: "easeInOut", delay: 0.45 },
-  //   },
-  //   close: {
-  //     opacity: 0,
-  //     y: 5,
-  //     height: 0,
-  //     transition: { duration: 0.35, ease: "easeInOut", delay: 0 },
-  //   },
-  // };
-
   return (
     <motion.div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       initial="close"
-      // animate={isHovered ? "open" : "close"}
       className={cn(
         "relative flex w-full flex-col justify-center rounded-md px-0.5 pb-0.5 pt-0.5",
-        // Responsive max widths
+
         "max-w-[280px] sm:max-w-[340px] lg:max-w-[400px]"
       )}
     >
@@ -203,11 +187,6 @@ const EventCard = ({
                     width: `${responsiveValues.eventWidth}px`,
                   }}
                 >
-                  {/* <motion.div
-                    animate={{ opacity: isHovered ? 1 : 0 }}
-                    transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="absolute inset-0 rounded-sm bg-neutral-400 dark:bg-neutral-900"
-                  /> */}
                   <div className="relative flex w-full items-center justify-between">
                     <span className={cn(
                       "rounded-sm bg-neutral-300 dark:bg-neutral-400",
@@ -240,56 +219,6 @@ const EventCard = ({
                     )} />
                   </div>
                 </div>
-
-                {/* Second Event */}
-                {/* <div
-                  className={cn(
-                    "absolute flex min-h-8 items-center justify-between rounded-sm p-1",
-                    "bg-neutral-400 dark:bg-neutral-900",
-                  )}
-                  style={{
-                    left: `${responsiveValues.secondEventPosition.left}px`,
-                    top: `${responsiveValues.secondEventPosition.top}px`,
-                    width: `${responsiveValues.eventWidth}px`,
-                  }}
-                >
-                  <motion.div
-                    animate={{ opacity: isHovered ? 1 : 0 }}
-                    transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="absolute inset-0 rounded-sm bg-gradient-to-r from-green-600 to-green-400 dark:to-emerald-800"
-                  />
-                  <div className="relative flex w-full items-center justify-between">
-                    <span className={cn(
-                      "rounded-sm bg-neutral-300 dark:bg-neutral-400",
-                      // Responsive indicator size
-                      "h-[8px] w-[2.5px] sm:h-[10px] sm:w-[3px]"
-                    )} />
-                    <div className="flex h-full w-full flex-col justify-center px-2">
-                      <p className={cn(
-                        "text-neutral-50 dark:text-neutral-200",
-                        // Responsive text size
-                        "text-[10px] sm:text-xs"
-                      )}>
-                        {secondEvent}
-                      </p>
-                      <motion.p
-                        variants={secondTimeVariant}
-                        className={cn(
-                          "overflow-hidden text-neutral-100 dark:text-neutral-300",
-                          // Responsive text size
-                          "text-[9px] sm:text-[11px]"
-                        )}
-                      >
-                        {secondEventTime}
-                      </motion.p>
-                    </div>
-                    <span className={cn(
-                      "rounded-sm bg-neutral-200 dark:bg-neutral-500",
-                      // Responsive indicator size
-                      "h-[8px] w-[2.5px] sm:h-[10px] sm:w-[3px]"
-                    )} />
-                  </div>
-                </div> */}
               </div>
             </motion.div>
           </div>
