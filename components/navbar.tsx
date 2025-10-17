@@ -13,28 +13,28 @@ import Link from "next/link"
 
 const products = [
   {
-    title: "Algochurn",
-    href: "#algochurn",
-    src: "https://assets.aceternity.com/demos/algochurn.webp",
-    description: "Prepare for tech interviews like never before.",
+    title: "Linear Temp — UI Template",
+    href: "#uitemplate",
+    src: "https://layrdui.dhruvtripathi.in/products/linear.png",
+    description: "A clean, responsive Next.js + Tailwind template designed for fast product launches and consistent UI.",
   },
   {
-    title: "Tailwind Master Kit",
-    href: "#tailwindmasterkit",
-    src: "https://assets.aceternity.com/demos/tailwindmasterkit.webp",
-    description: "Production ready Tailwind css components for your next project",
+    title: "Linear Temp — Docs Kit",
+    href: "#docskit",
+    src: "https://layrdui.dhruvtripathi.in/products/polar-auth.png",
+    description: "Documentation and component guidelines for shipping polished docs, changelogs, and marketing pages quickly.",
   },
   {
-    title: "Moonbeam",
-    href: "#moonbeam",
-    src: "https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png",
-    description: "Never write from scratch again. Go from idea to blog in minutes.",
+    title: "Linear Temp — Blog Starter",
+    href: "#blogstarter",
+    src: "https://layrdui.dhruvtripathi.in/products/linear1.png",
+    description: "Content-first blog layout with MDX support, SEO optimizations, and ready-to-use post templates.",
   },
   {
-    title: "Rogue",
-    href: "#rogue",
-    src: "https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png",
-    description: "Respond to government RFPs, RFIs and RFQs 10x faster using AI",
+    title: "Linear Temp — Dashboard",
+    href: "#dashboard",
+    src: "https://layrdui.dhruvtripathi.in/products/linear2.png",
+    description: "Admin and analytics dashboard patterns with reusable components for monitoring and insights.",
   },
 ]
 
@@ -99,7 +99,7 @@ export const Navbar = () => {
               alt="Linear Logo"
               quality={100}
               priority={true}
-              className="h-8 w-8 sm:h-9 sm:w-9 lg:h-10 lg:w-10 flex-shrink-0 rounded-xl object-cover"
+              className="h-8 w-8 sm:h-9 sm:w-9 dark:invert lg:h-10 lg:w-10 flex-shrink-0 rounded-xl object-cover"
             />
             <h3 className="text-base sm:text-lg lg:text-xl font-bold text-black dark:text-white">Linear</h3>
           </Link>

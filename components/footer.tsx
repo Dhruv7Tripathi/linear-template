@@ -24,7 +24,7 @@ export default function Footer() {
                   alt="Linear Logo"
                   quality={100}
                   priority={true}
-                  className="h-8 w-8 sm:h-10 sm:w-10 flex-shrink-0 rounded-xl object-cover"
+                  className="h-8 w-8 sm:h-10 sm:w-10 flex-shrink-0 dark:invert rounded-xl object-cover"
                 />
                 <h3 className="text-lg sm:text-xl font-bold text-black dark:text-white">Linear</h3>
               </Link>
