@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
-
+// import TopBanner from "@/components/ui/top-banner";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -31,18 +31,18 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "LayrdUI", url: "https://layrdui.com" }],
   creator: "LayrdUI",
-  metadataBase: new URL("https://yourdomain.com"),
+  metadataBase: new URL("https://linear-template.vercel.app"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yourdomain.com",
+    url: "https://linear-template.vercel.app",
     title: "Linear Template | LayrdUI",
     description:
       "A modern, sleek, and responsive landing page template built with Next.js and Tailwind CSS.",
     siteName: "Linear Template",
     images: [
       {
-        url: "https://yourdomain.com/og-image.png", // replace with your actual image
+        url: "https://linear-template.vercel.app/og-image.png", // replace with your actual image
         width: 1200,
         height: 630,
         alt: "Linear Template Open Graph Image",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     description:
       "A modern, sleek, and responsive landing page template built with Next.js and Tailwind CSS.",
     creator: "@layrdui", // replace with your Twitter handle if available
-    images: ["https://yourdomain.com/og-image.png"], // replace with your actual image
+    images: ["https://linear-template.vercel.app/og-image.png"], // replace with your actual image
   },
   robots: {
     index: true,
@@ -84,7 +84,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="bg-white dark:bg-black">
+          {/* <TopBanner /> */}
+          <div className="bg-white dark:bg-black min-h-screen">
             {children}
           </div>
         </ThemeProvider>

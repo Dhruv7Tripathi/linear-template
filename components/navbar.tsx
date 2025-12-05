@@ -15,25 +15,25 @@ const products = [
   {
     title: "Linear Temp — UI Template",
     href: "#uitemplate",
-    src: "https://layrdui.dhruvtripathi.in/products/linear.png",
+    src: "https://layrdui.in/products/linear.png",
     description: "A clean, responsive Next.js + Tailwind template designed for fast product launches and consistent UI.",
   },
   {
     title: "Linear Temp — Docs Kit",
     href: "#docskit",
-    src: "https://layrdui.dhruvtripathi.in/products/polar-auth.png",
+    src: "https://layrdui.in/products/polar-auth.png",
     description: "Documentation and component guidelines for shipping polished docs, changelogs, and marketing pages quickly.",
   },
   {
     title: "Linear Temp — Blog Starter",
     href: "#blogstarter",
-    src: "https://layrdui.dhruvtripathi.in/products/linear1.png",
+    src: "https://layrdui.in/products/linear1.png",
     description: "Content-first blog layout with MDX support, SEO optimizations, and ready-to-use post templates.",
   },
   {
     title: "Linear Temp — Dashboard",
     href: "#dashboard",
-    src: "https://layrdui.dhruvtripathi.in/products/linear2.png",
+    src: "https://layrdui.in/products/linear2.png",
     description: "Admin and analytics dashboard patterns with reusable components for monitoring and insights.",
   },
 ]
